@@ -1,0 +1,219 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import-helpers",
+    "jest",
+    "sort-destructure-keys",
+    "better-styled-components"
+  ],
+  "rules": {
+    "react/display-name": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/function-component-definition": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "olist-shapeshifter/*"
+        ]
+      }
+    ],
+    "class-methods-use-this": "off",
+    "no-shadow": "off",
+    "no-console": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "lines-between-class-members": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "error",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react$/",
+          "module",
+          "/^@olist/",
+          [
+            "/^types/",
+            "/^components/",
+            "/^contexts/",
+            "/^helpers/",
+            "/^hooks/",
+            "/^images/",
+            "/^locales/",
+            "/^mocks/",
+            "/^pages/",
+            "/^routes/",
+            "/^styles/",
+            "/^utils/"
+          ],
+          [
+            "parent",
+            "absolute",
+            "sibling"
+          ],
+          "index"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "styled-components",
+            "message": "Please import from styled-components/macro."
+          }
+        ],
+        "patterns": [
+          "!styled-components/macro"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "import/named": "off",
+    "better-styled-components/sort-declarations-alphabetically": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "paths": [
+              "src"
+            ],
+            "extensions": [
+              ".ts",
+              ".tsx",
+              ".native.js",
+              ".js",
+              ".jsx"
+            ]
+          }
+        }
+      },
+      "rules": {
+        "camelcase": 0,
+        "react/no-unused-prop-types": "off",
+        "no-underscore-dangle": 0,
+        "react/require-default-props": 0,
+        "react/prop-types": 0,
+        "no-return-assign": 0,
+        "no-param-reassign": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+          "error"
+        ],
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "interface",
+            "format": [
+              "PascalCase"
+            ],
+            "custom": {
+              "regex": "^I[A-Z]",
+              "match": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
