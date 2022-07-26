@@ -1,18 +1,15 @@
+name: Workflow Dispatch
+
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+      input:
+        description: "Test"
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
+        default: "World"
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  printInputs:
+  job1:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}"
+      - run: echo Hello ${{ github.event.inputs.input }}
