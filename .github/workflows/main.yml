@@ -2,7 +2,7 @@ name: Workflow Dispatcha
 
 on:
   pull_request:
-    branches: [main, staging]
+    branches: [master, staging]
     types: [lock]
 
 jobs:
