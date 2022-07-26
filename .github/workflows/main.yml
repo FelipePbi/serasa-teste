@@ -23,7 +23,7 @@ jobs:
 
       - uses: juliangruber/sleep-action@v1
         with:
-          time: 30s
+          time: 40s
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
