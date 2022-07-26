@@ -19,7 +19,7 @@ function TabPanel(props: ITabPanelProps) {
 
   return (
     <div
-      role="tabpanel"
+      role="tabpaaaanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
