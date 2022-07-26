@@ -1,4 +1,4 @@
-name: Workflow Dispatch
+name: Workflow Dispatcha
 
 on:
   pull_request:
