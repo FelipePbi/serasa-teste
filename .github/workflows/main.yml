@@ -1,15 +1,12 @@
 name: Workflow Dispatch
 
 on:
-  workflow_dispatch:
-    inputs:
-      input:
-        description: "Test"
-        required: true
-        default: "World"
+  pull_request:
+    branches: [main, staging]
+    types: [lock]
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Hello ${{ github.event.inputs.input }}
+      - run: echo Hello
