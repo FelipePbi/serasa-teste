@@ -2,11 +2,13 @@ name: Workflow Dispatch
 
 on:
   pull_request:
-    branches: [master, staging]
-    types: [lock]
+    branches:
+      - deploy
+    types: [closed]
 
 jobs:
   job1:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - run: echo Hello
