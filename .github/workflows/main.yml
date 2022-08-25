@@ -3,7 +3,7 @@ name: Workflow Dispatch 2
 on:
   pull_request:
     branches:
-      - deploy
+      - master
     types: [closed]
 
 jobs:
